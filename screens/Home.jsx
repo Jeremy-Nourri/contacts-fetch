@@ -19,11 +19,9 @@ const Home = () => {
         error => console.log(error),
         {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
         );
-        console.log(coordinates);
       }, []);
 
     const handlePress = async () => {
-        console.log('i press');
         const data = await getCityAndCountry(coordinates.latitude, coordinates.longitude);
         setInformations({city: data.LocalizedName, country: data.Country.LocalizedName});
     };
@@ -39,13 +37,11 @@ const Home = () => {
                 (
                     <>
                         <Text style={styles.text}>Pays: {informations.country}</Text>
-                        <Text style={styles.text}>Ville :{informations.city}</Text>
+                        <Text style={styles.text}>Ville : {informations.city}</Text>
                     </>
 
                 )
             }
-
-
             <Pressable
                 onPress={handlePress}
                 style={styles.button}
