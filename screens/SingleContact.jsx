@@ -1,4 +1,4 @@
-import {Pressable, StyleSheet, Text, View, Linking} from 'react-native';
+import {StyleSheet, Text, View, Linking} from 'react-native';
 import {useLayoutEffect} from 'react';
 import {Button} from 'react-native-paper';
 

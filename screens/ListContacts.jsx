@@ -22,10 +22,6 @@ const ListContacts = ({navigation}) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Mes contacts</Text>
-            {usersList.length === 0 ? (
-                <Text>Aucun contact</Text>
-            ) : (
                 <FlatList
                     style={styles.flatlist}
                     data={usersList}
@@ -45,7 +41,6 @@ const ListContacts = ({navigation}) => {
                     )}
                     keyExtractor={item => item.id.toString()}
                 />
-            )}
         </View>
     );
 };
